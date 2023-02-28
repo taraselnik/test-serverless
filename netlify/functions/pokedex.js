@@ -1,11 +1,10 @@
+// import fetch  from 'node-fetch'
 
-const POKE_API = 'https://catfact.ninja/fact';
+export async function handler () {
+  const POKE_API = 'https://pokeapi.co/api/v2/pokedex/2'
 
-exports.handler = async function () {
   const response = await fetch(POKE_API)
   const data = await response.json()
-
-  // console.log(data)
 
   return {
     statusCode: 200,
